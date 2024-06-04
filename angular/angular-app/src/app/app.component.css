@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.input {
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.data-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.year-section, .quarter-section, .month-section, .day-section {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.year-section {
+  background-color: #f9f9f9;
+}
+
+.quarter-section {
+  background-color: #f0f0f0;
+}
+
+.month-section {
+  background-color: #e9e9e9;
+}
+
+.day-section {
+  background-color: #e0e0e0;
+}
+
+h2, h3, h4, h5 {
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+  <label class="label" for="start_date">Start Date:</label>
+  <input class="input" type="date" id="start_date" (change)="onDateChange($event, true)">
+
+  <label class="label" for="end_date">End Date:</label>
+  <input class="input" type="date" id="end_date" (change)="onDateChange($event, false)">
+
+  <button class="button" (click)="submitRequest()">Submit</button>
+</div>
+
+<div class="data-container" *ngIf="currencyRates && getKeys(currencyRates).length">
+  <div *ngFor="let year of getKeys(currencyRates)" class="year-section">
+    <h2>{{ year }}</h2>
+    <div *ngFor="let quarter of getKeys(currencyRates[year])" class="quarter-section">
+      <h3>{{ quarter }}</h3>
+      <div *ngFor="let month of getKeys(currencyRates[year][quarter])" class="month-section">
+        <h4>{{ getMonthName(month) }}</h4>
+        <div *ngFor="let day of getKeys(currencyRates[year][quarter][month])" class="day-section">
+          <h5>{{ day }}.{{ month }}.{{ year }}</h5>
+          <ul>
+            <li *ngFor="let rate of currencyRates[year][quarter][month][day]">
+              {{ rate.currency_symbol }}: {{ rate.rate }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
